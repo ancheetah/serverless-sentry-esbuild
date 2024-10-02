@@ -1,0 +1,30 @@
+{
+  "name": "zambdas",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@sentry/aws-serverless": "^8.26.0",
+    "aws-lambda": "^1.0.7",
+    "prettier": "^3.0.0"
+  },
+  "devDependencies": {
+    "@sentry/esbuild-plugin": "^2.22.2",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "serverless": "^3.26.0",
+    "serverless-esbuild": "^1.52.1",
+    "serverless-offline": "^12.0.3",
+    "typescript": "^4.9.5"
+  }
+}
