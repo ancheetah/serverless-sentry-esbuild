@@ -1,3 +1,4 @@
+import '../../instrument.mjs';
 import { APIGatewayProxyResult } from 'aws-lambda';
 import { wrapHandler } from '@sentry/aws-serverless';
 
