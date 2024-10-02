@@ -38,6 +38,104 @@ functions:
           path: zambda/zambda-1
           method: POST
     timeout: 25
+  zambda-2:
+    handler: src/zambda-2/index.index
+    events:
+      - http:
+          path: zambda/zambda-2
+          method: POST
+    timeout: 25
+  zambda-3:
+    handler: src/zambda-3/index.index
+    events:
+      - http:
+          path: zambda/zambda-3
+          method: POST
+    timeout: 25
+  zambda-4:
+    handler: src/zambda-4/index.index
+    events:
+      - http:
+          path: zambda/zambda-4
+          method: POST
+    timeout: 25
+  zambda-5:
+    handler: src/zambda-5/index.index
+    events:
+      - http:
+          path: zambda/zambda-5
+          method: POST
+    timeout: 25
+  zambda-6:
+    handler: src/zambda-6/index.index
+    events:
+      - http:
+          path: zambda/zambda-6
+          method: POST
+    timeout: 25
+  zambda-7:
+    handler: src/zambda-7/index.index
+    events:
+      - http:
+          path: zambda/zambda-7
+          method: POST
+    timeout: 25
+  zambda-8:
+    handler: src/zambda-8/index.index
+    events:
+      - http:
+          path: zambda/zambda-8
+          method: POST
+    timeout: 25
+  zambda-9:
+    handler: src/zambda-9/index.index
+    events:
+      - http:
+          path: zambda/zambda-9
+          method: POST
+    timeout: 25
+  zambda-10:
+    handler: src/zambda-10/index.index
+    events:
+      - http:
+          path: zambda/zambda-10
+          method: POST
+    timeout: 25
+  zambda-11:
+    handler: src/zambda-11/index.index
+    events:
+      - http:
+          path: zambda/zambda-11
+          method: POST
+    timeout: 25
+  zambda-12:
+    handler: src/zambda-12/index.index
+    events:
+      - http:
+          path: zambda/zambda-12
+          method: POST
+    timeout: 25
+  zambda-13:
+    handler: src/zambda-13/index.index
+    events:
+      - http:
+          path: zambda/zambda-13
+          method: POST
+    timeout: 25
+  zambda-14:
+    handler: src/zambda-14/index.index
+    events:
+      - http:
+          path: zambda/zambda-14
+          method: POST
+    timeout: 25
+  zambda-15:
+    handler: src/zambda-15/index.index
+    events:
+      - http:
+          path: zambda/zambda-15
+          method: POST
+    timeout: 25
     
 plugins:
   - serverless-esbuild
