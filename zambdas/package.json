@@ -2,7 +2,8 @@
   "name": "zambdas",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "package": "tsc && SOURCEMAPS=true NODE_OPTIONS='--enable-source-maps --max_old_space_size=4096' sls package"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,44 @@
+service: zambdas
+
+frameworkVersion: '3'
+
+package:
+  individually: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  environment:
+    NODE_OPTIONS: "--enable-source-maps --max_old_space_size=4096"
+    SENTRY_AUTH_TOKEN: ${file(./.env/${self:provider.stage}.json):SENTRY_AUTH_TOKEN}
+
+custom:
+  defaultStage: local
+  serverless-offline:
+    reloadHandler: true
+    httpPort: 3000
+    lambdaPort: 3001
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    platform: 'node'
+    outputBuildFolder: '.build'
+    keepOutputDirectory: true
+    logLevel: debug
+    skipRebuild: true
+    plugins: './esbuild.plugins.js'
+
+functions:
+  zambda-1:
+    handler: src/zambda-1/index.index
+    events:
+      - http:
+          path: zambda/zambda-1
+          method: POST
+    timeout: 25
+    
+plugins:
+  - serverless-esbuild
+  - serverless-offline
