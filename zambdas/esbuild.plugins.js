@@ -5,6 +5,7 @@ module.exports = (serverless) => {
       sentryEsbuildPlugin({
         org: '',
         project: '',
+        disable: !process.env.SOURCEMAPS,
         authToken:
           process.env.SOURCEMAPS === 'true'
             ? serverless.configurationInput.provider.environment.SENTRY_AUTH_TOKEN
