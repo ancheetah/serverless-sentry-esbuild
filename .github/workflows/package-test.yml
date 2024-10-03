@@ -1,0 +1,23 @@
+name: Package test
+
+jobs:
+  package:
+    env:
+      ZAMBDAS_LOCATION: zambdas
+      NODE_OPTIONS: '--max_old_space_size=4096'
+  
+  runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.14.0]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Package zambdas and upload Sentry sourcemaps
+        run: cd ${{ env.ZAMBDAS_LOCATION }} && npm run package
