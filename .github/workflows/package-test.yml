@@ -22,5 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install dependencies
+        run: cd ${{ env.ZAMBDAS_LOCATION }} && npm ci
+
       - name: Package zambdas and upload Sentry sourcemaps
         run: cd ${{ env.ZAMBDAS_LOCATION }} && npm run package
