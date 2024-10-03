@@ -1,12 +1,15 @@
 name: Package test
 
+on:
+  workflow_dispatch:
+
 jobs:
   package:
     env:
       ZAMBDAS_LOCATION: zambdas
       NODE_OPTIONS: '--max_old_space_size=4096'
   
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
